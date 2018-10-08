@@ -37,7 +37,7 @@ public class MainClass {
 	            FileWriter fw = new FileWriter(file);
 	            fw.write("Hello");
 	            fw.close();
-	            
+
 	            String str = null;
 	            BufferedReader br = new BufferedReader(new FileReader(file));
 	            str=br.readLine();
