@@ -4,7 +4,7 @@ import by.nik.traning.EventException;
 
 public class Event{
 
-	private Long id;
+	private Integer id;
 	private String description;
 	private String date;
 	private String place;
@@ -13,7 +13,7 @@ public class Event{
 
 	public Event(){}
 
-	public Event(Long id, String description, String date, String place, Integer countPlace, Integer countUser) {
+	public Event(Integer id, String description, String date, String place, Integer countPlace, Integer countUser) {
 		this.id = id;
 		this.description = description;
 		this.date = date;
@@ -33,7 +33,7 @@ public class Event{
 	public void setCountPlace(Integer countPlace) {
 		this.countPlace = countPlace;
 	}
-	public void setId(Long id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 
@@ -53,7 +53,7 @@ public class Event{
 		this.countUser = countUser;
 	}
 
-	public Long getId() {
+	public Integer getId() {
 		return id;
 	}
 

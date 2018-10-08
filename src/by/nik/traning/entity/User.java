@@ -4,7 +4,7 @@ import java.util.Set;
 
 public class User{
 	
-	private Long id;
+	private Integer id;
 	private String firstName;
 	private String lastName;
 	private int age;
@@ -16,15 +16,14 @@ public class User{
 
 	public User(){}
 
-	public User(Long id, String firstName, String lastName, int age, Set<Role> role) {
+	public User(Integer id, String firstName, String lastName, int age) {
 		this.id = id;
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.age = age;
-		this.role = role;
 	}
 
-	public void setId(Long id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 
@@ -60,7 +59,7 @@ public class User{
 		this.phoneNumber = phoneNumber;
 	}
 
-	public Long getId() {
+	public Integer getId() {
 		return id;
 	}
 
