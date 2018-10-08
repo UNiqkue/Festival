@@ -1,13 +1,38 @@
 package by.nik.traning.entity;
 
+import by.nik.traning.EventException;
+
 public class Event{
 
 	private Long id;
 	private String description;
 	private String date;
 	private String place;
+	private Integer countPlace;
 	private Integer countUser;
 
+	public Event(){}
+
+	public Event(Long id, String description, String date, String place, Integer countPlace, Integer countUser) {
+		this.id = id;
+		this.description = description;
+		this.date = date;
+		this.place = place;
+		this.countPlace = countPlace;
+		this.countUser = countUser;
+	}
+
+	public void addUser() throws EventException {
+		countUser++;
+	}
+
+	public Integer getCountPlace() {
+		return countPlace;
+	}
+
+	public void setCountPlace(Integer countPlace) {
+		this.countPlace = countPlace;
+	}
 	public void setId(Long id) {
 		this.id = id;
 	}
@@ -47,4 +72,6 @@ public class Event{
 	public Integer getCountUser() {
 		return countUser;
 	}
+
+
 }

@@ -14,6 +14,16 @@ public class User{
 	private String email;
 	private String phoneNumber;
 
+	public User(){}
+
+	public User(Long id, String firstName, String lastName, int age, Set<Role> role) {
+		this.id = id;
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.age = age;
+		this.role = role;
+	}
+
 	public void setId(Long id) {
 		this.id = id;
 	}

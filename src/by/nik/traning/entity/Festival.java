@@ -1,14 +1,34 @@
 package by.nik.traning.entity;
 
+import by.nik.traning.EventException;
+
 public class Festival extends Event {
 
     private Long id;
     private String description;
     private String date;
     private String place;
+	private Integer countPlace;
     private Integer countUser;
-    
-	public Long getId() {
+
+    public Festival(){}
+
+	public Festival(Long id, String description, String date, String place, Integer countPlace, Integer countUser) {
+		super(id, description, date, place, countPlace, countUser);
+	}
+
+	public void addUser() throws EventException {
+		countUser++;
+	}
+
+	public Integer getCountPlace() {
+		return countPlace;
+	}
+
+	public void setCountPlace(Integer countPlace) {
+		this.countPlace = countPlace;
+	}
+    public Long getId() {
 		return id;
 	}
 	public void setId(Long id) {
