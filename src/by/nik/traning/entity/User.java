@@ -1,6 +1,10 @@
 package by.nik.traning.entity;
 
+import by.nik.traning.exceptions.PhoneNumberException;
+
 import java.util.Set;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class User{
 	
@@ -16,11 +20,29 @@ public class User{
 
 	public User(){}
 
-	public User(Integer id, String firstName, String lastName, int age) {
+	public User(Integer id, String firstName, String lastName, int age, Set<Role> role, String phoneNumber) {
 		this.id = id;
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.age = age;
+		this.role = role;
+		this.phoneNumber = phoneNumber;
+	}
+
+	public void verifyPhoneNumber(String phoneNumber) throws PhoneNumberException {
+		Pattern pattern = Pattern.compile("((80|\\+375)[\\s|-]?(29|25|33|44))[\\s|-]?(\\d{7}|\\d{3}[\\s|-]?\\d{2}[\\s|-]?\\d{2})");
+		Matcher matcher = pattern.matcher(phoneNumber);
+		/*boolean bl = matcher.find();
+		System.out.println(bl);
+		if(!bl){
+			throw new PhoneNumberException("No any symbol");
+		}*/
+		//System.out.println(matcher.group());
+		boolean bl = matcher.matches();
+		System.out.println(bl);
+		if(!bl){
+			throw new PhoneNumberException("Match not found");
+		}
 	}
 
 	public void setId(Integer id) {

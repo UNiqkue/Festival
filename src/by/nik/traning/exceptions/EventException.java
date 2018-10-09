@@ -1,4 +1,4 @@
-package by.nik.traning;
+package by.nik.traning.exceptions;
 
 
 public class EventException extends Exception {

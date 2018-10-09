@@ -1,6 +1,6 @@
 package by.nik.traning.entity;
 
-import by.nik.traning.EventException;
+import by.nik.traning.exceptions.EventException;
 
 public class Concert extends Event {
 
@@ -24,7 +24,6 @@ public class Concert extends Event {
 	public Integer getCountPlace() {
 		return countPlace;
 	}
-
 	public void setCountPlace(Integer countPlace) {
 		this.countPlace = countPlace;
 	}

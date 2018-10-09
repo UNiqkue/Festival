@@ -1,6 +1,6 @@
 package by.nik.traning.entity;
 
-import by.nik.traning.EventException;
+import by.nik.traning.exceptions.EventException;
 
 public class Festival extends Event {
 
