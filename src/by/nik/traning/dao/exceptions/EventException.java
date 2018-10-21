@@ -1,4 +1,4 @@
-package by.nik.traning.exceptions;
+package by.nik.traning.dao.exceptions;
 
 
 public class EventException extends Exception {

@@ -1,4 +1,4 @@
-package by.nik.traning.collection;
+package by.nik.traning.dao.collection;
 
 import java.util.*;
 
