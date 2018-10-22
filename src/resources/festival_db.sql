@@ -71,7 +71,7 @@ create table performer (
 
 alter table if exists ev
     add constraint ev_user_fk
-    foreign key (user_id) references user(user_id);
+    foreign key (user_id) references user(id);
 
 alter table if exists user_role
     add constraint user_role_user_fk
