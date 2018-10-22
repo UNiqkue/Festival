@@ -16,6 +16,7 @@ public class Performer extends User {
     private String phoneNumber;
     private Date dateOfBirth;
     private String duration;
+    private String genre;
 
     public Performer(){}
 
@@ -97,5 +98,13 @@ public class Performer extends User {
 
     public void setDuration(String duration) {
         this.duration = duration;
+    }
+
+    public String getGenre() {
+        return genre;
+    }
+
+    public void setGenre(String genre) {
+        this.genre = genre;
     }
 }

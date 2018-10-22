@@ -11,6 +11,7 @@ import java.util.Set;
 public class Festival extends Event {
 
 	private Long id;
+	private String name;
 	private String description;
 	private Date date;
 	private String place;
@@ -22,6 +23,12 @@ public class Festival extends Event {
 
 	public Festival(){}
 
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
 	public Long getCountPlace() {
 		return countPlace;
 	}
@@ -52,35 +59,27 @@ public class Festival extends Event {
 	public void setPlace(String place) {
 		this.place = place;
 	}
-
 	public List<User> getListOfUsers() {
 		return listOfUsers;
 	}
-
 	public void setListOfUsers(List<User> listOfUsers) {
 		this.listOfUsers = listOfUsers;
 	}
-
 	public List<Performer> getListOfPerformers() {
 		return listOfPerformers;
 	}
-
 	public void setListOfPerformers(List<Performer> listOfPerformers) {
 		this.listOfPerformers = listOfPerformers;
 	}
-
 	public double getPrice() {
 		return price;
 	}
-
 	public void setPrice(double price) {
 		this.price = price;
 	}
-
 	public Set<TypeFestival> getType() {
 		return type;
 	}
-
 	public void setType(Set<TypeFestival> type) {
 		this.type = type;
 	}
