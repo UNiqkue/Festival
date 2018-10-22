@@ -1,10 +1,10 @@
 package by.nik.traning.dao.entity;
 
-import by.nik.traning.dao.entity.abstracts.BaseUser;
+import by.nik.traning.dao.entity.abstracts.User;
 
 import java.sql.Date;
 
-public class Performer extends BaseUser {
+public class Performer extends User {
 
     private Long id;
     private String firstName;

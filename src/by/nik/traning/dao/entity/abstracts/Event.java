@@ -1,22 +1,20 @@
 package by.nik.traning.dao.entity.abstracts;
 
 import by.nik.traning.dao.entity.Performer;
-import by.nik.traning.dao.entity.User;
-import by.nik.traning.dao.exceptions.EventException;
 
 import java.util.Date;
 import java.util.List;
 
 public abstract class Event extends BaseEntity{
 
-	protected Long id;
-	protected String description;
-	protected Date date;
-	protected String place;
-	protected Long countPlace;
-	protected List<User> listOfUsers;
-	protected List<Performer> listOfPerformers;
-	protected double price;
+	private Long id;
+	private String description;
+	private Date date;
+	private String place;
+	private Long countPlace;
+	private List<User> listOfUsers;
+	private List<Performer> listOfPerformers;
+	private double price;
 
 	public Long getCountPlace() {
 		return countPlace;

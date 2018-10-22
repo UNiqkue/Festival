@@ -1,5 +1,5 @@
 package by.nik.traning.dao.entity.enums;
 
 public enum TypeFestival {
-    Kino, Food, Beer, Music;
+    KINO, FOOD, BEER, MUSIC;
 }

@@ -1,9 +1,12 @@
 package by.nik.traning.dao.entity;
 
 import by.nik.traning.dao.entity.abstracts.Event;
+import by.nik.traning.dao.entity.abstracts.User;
+import by.nik.traning.dao.entity.enums.TypeConcert;
 
 import java.util.Date;
 import java.util.List;
+import java.util.Set;
 
 public class Concert extends Event {
 
@@ -15,6 +18,7 @@ public class Concert extends Event {
 	private List<User> listOfUsers;
 	private List<Performer> listOfPerformers;
 	private double price;
+	private Set<TypeConcert> type;
 
     public Concert(){}
 

@@ -2,7 +2,7 @@ package by.nik.traning.dao.entity.abstracts;
 
 public abstract class BaseEntity {
 
-    protected Long id;
+    private Long id;
 
     public Long getId() {
         return id;

@@ -1,6 +1,7 @@
 package by.nik.traning.dao.entity;
 
 import by.nik.traning.dao.entity.abstracts.Event;
+import by.nik.traning.dao.entity.abstracts.User;
 import by.nik.traning.dao.entity.enums.TypeFestival;
 
 import java.util.Date;
