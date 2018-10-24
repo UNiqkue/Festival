@@ -19,7 +19,7 @@ public class User extends BaseEntity {
 	private String activationCode;
 	private Set<Role> role;
 	private String phoneNumber;
-	private Date dateOfBirth;
+	private int age;
 	private long cardNumber;
 
 	public User(){ }
@@ -56,12 +56,12 @@ public class User extends BaseEntity {
 		this.lastName = lastName;
 	}
 
-	public Date getDateOfBirth() {
-		return dateOfBirth;
+	public int getAge() {
+		return age;
 	}
 
-	public void setDateOfBirth(Date dateOfBirth) {
-		this.dateOfBirth = dateOfBirth;
+	public void setAge(int age) {
+		this.age = age;
 	}
 
 	public String getUsername() {

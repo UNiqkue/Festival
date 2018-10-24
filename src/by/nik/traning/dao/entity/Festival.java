@@ -11,13 +11,11 @@ public class Festival extends BaseEntity {
 
 	private String name;
 	private String description;
-	private Date date;
-	private String place;
 	private Long countPlace;
-	private List<User> listOfUsers;
-	private List<Performer> listOfPerformers;
 	private double price;
 	private Set<TypeEvent> type;
+	private List<User> listOfUsers;
+	private List<Performer> listOfPerformers;
 
 	public Festival(){ }
 
@@ -36,20 +34,8 @@ public class Festival extends BaseEntity {
 	public void setDescription(String description) {
 		this.description = description;
 	}
-	public void setDate(Date date) {
-		this.date = date;
-	}
-	public void setPlace(String place) {
-		this.place = place;
-	}
 	public String getDescription() {
 		return description;
-	}
-	public Date getDate() {
-		return date;
-	}
-	public String getPlace() {
-		return place;
 	}
 	public List<User> getListOfUsers() {
 		return listOfUsers;

@@ -1,43 +1,16 @@
-create table ev (
+create table performer (
     id bigint(20) not null,
-    name varchar(255) not null,
-    description varchar(255) not null,
-    data date not null,
-    place varchar(255) not null,
-    countPlace int,
-    price decimal,
+    firstName varchar(255) not null,
+    lastName varchar(255) not null,
+    username varchar(255) not null,
+    password varchar(255) not null,
+    email varchar(255),
+    activationCode varchar(255),
+    phoneNumber varchar(255),
+    age int(11),
+    duration varchar(255),
+    genre varchar(255),
     primary key (id)
-);
-
-create table listOfUsers (
-    id bigint(20) not null,
-    list varchar(255),
-    user_id bigint(20) not null,
-    ev_id bitint(20) not null,
-    FOREIGN KEY (user_id) REFERENCES user (id),
-    FOREIGN KEY (ev_id) REFERENCES ev (id)
-);
-
-create table listOfPerformer (
-    id bigint(20) not null,
-    list varchar(255),
-    p_id bigint(20) not null,
-    ev_id bitint(20) not null,
-    FOREIGN KEY (p_id) REFERENCES performer (id),
-    FOREIGN KEY (ev_id) REFERENCES ev (id)
-);
-
-create table ev_type (
-    id bigint(20) not null,
-    evtype varchar(255),
-    ev_id bigint(20) not null,
-    FOREIGN KEY (ev_id) REFERENCES ev (id)
-);
-
-create table user_role (
-    id bigint(20) not null,
-    roles varchar(255),
-    user_id bigint(20) not null
 );
 
 create table user (
@@ -49,30 +22,54 @@ create table user (
     email varchar(255),
     activationCode varchar(255),
     phoneNumber varchar(255),
-    dateOfBirth date,
+    age int(11),
     cardNumber int(16),
     primary key (id)
 );
 
-create table performer (
+create table fest (
     id bigint(20) not null,
-    firstName varchar(255) not null,
-    lastName varchar(255) not null,
-    username varchar(255) not null,
-    password varchar(255) not null,
-    email varchar(255),
-    activationCode varchar(255),
-    phoneNumber varchar(255),
-    dateOfBirth date,
-    duration varchar(255),
-    genre varchar(255),
+    name varchar(255) not null,
+    description varchar(255) not null,
+    countPlace int,
+    price float,
     primary key (id)
 );
 
-alter table if exists ev
-    add constraint ev_user_fk
-    foreign key (user_id) references user(id);
+create table fest_type (
+    evtype varchar(255),
+    fest_id bigint(20) not null
+);
 
-alter table if exists user_role
-    add constraint user_role_user_fk
-    foreign key (user_id) references user(id);
+create table user_role (
+    role varchar(255),
+    user_id bigint(20) not null
+);
+
+create table listOfUsers (
+    id bigint(20) not null,
+    list varchar(255),
+    user_id bigint(20) not null,
+    fest_id bigint(20) not null,
+    primary key (id)
+);
+
+create table listOfPerformer (
+    id bigint(20) not null,
+    list varchar(255),
+    p_id bigint(20) not null,
+    fest_id bigint(20) not null,
+    primary key (id)
+);
+
+alter table listOfUsers add foreign key(user_id) references festival(id);
+
+alter table listOfUsers add foreign key(fest_id) references festival(id);
+
+alter table listOfPerformer add foreign key(p_id) references performer(id);
+
+alter table listOfPerformer add foreign key(fest_id) references festival(id);
+
+alter table user_role add foreign key(user_id) references user(id);
+
+alter table fest_type add foreign key(fest_id) references user(id);
