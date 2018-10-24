@@ -15,7 +15,7 @@ public class Performer extends User {
     private String duration;
     private String genre;
 
-    public Performer(){}
+    public Performer(){ }
 
     public String getFirstName() {
         return firstName;

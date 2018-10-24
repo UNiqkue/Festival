@@ -22,7 +22,7 @@ public class User extends BaseEntity {
 	private Date dateOfBirth;
 	private long cardNumber;
 
-	public User(){}
+	public User(){ }
 
 	public void verifyPhoneNumber(String phoneNumber) throws PhoneNumberException {
 		Pattern pattern = Pattern.compile("((80|\\+375)[\\s|-]?(29|25|33|44))[\\s|-]?(\\d{7}|\\d{3}[\\s|-]?\\d{2}[\\s|-]?\\d{2})");

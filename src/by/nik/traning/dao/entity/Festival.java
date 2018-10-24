@@ -19,7 +19,7 @@ public class Festival extends BaseEntity {
 	private double price;
 	private Set<TypeEvent> type;
 
-	public Festival(){}
+	public Festival(){ }
 
 	public String getName() {
 		return name;
