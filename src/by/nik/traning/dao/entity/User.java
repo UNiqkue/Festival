@@ -1,4 +1,4 @@
-package by.nik.traning.dao.entity.abstracts;
+package by.nik.traning.dao.entity;
 
 import by.nik.traning.dao.entity.abstracts.BaseEntity;
 import by.nik.traning.dao.entity.enums.Role;
@@ -9,9 +9,8 @@ import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public abstract class User extends BaseEntity {
-	
-	private Long id;
+public class User extends BaseEntity {
+
 	private String firstName;
 	private String lastName;
 	private String username;
@@ -39,14 +38,6 @@ public abstract class User extends BaseEntity {
 		if(!bl){
 			throw new PhoneNumberException("Invalid phone number");
 		}
-	}
-
-	public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
 	}
 
 	public String getFirstName() {

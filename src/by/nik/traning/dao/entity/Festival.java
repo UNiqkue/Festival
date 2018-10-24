@@ -1,16 +1,14 @@
 package by.nik.traning.dao.entity;
 
-import by.nik.traning.dao.entity.abstracts.Event;
-import by.nik.traning.dao.entity.abstracts.User;
-import by.nik.traning.dao.entity.enums.TypeFestival;
+import by.nik.traning.dao.entity.abstracts.BaseEntity;
+import by.nik.traning.dao.entity.enums.TypeEvent;
 
 import java.util.Date;
 import java.util.List;
 import java.util.Set;
 
-public class Festival extends Event {
+public class Festival extends BaseEntity {
 
-	private Long id;
 	private String name;
 	private String description;
 	private Date date;
@@ -19,7 +17,7 @@ public class Festival extends Event {
 	private List<User> listOfUsers;
 	private List<Performer> listOfPerformers;
 	private double price;
-	private Set<TypeFestival> type;
+	private Set<TypeEvent> type;
 
 	public Festival(){}
 
@@ -35,35 +33,31 @@ public class Festival extends Event {
 	public void setCountPlace(Long countPlace) {
 		this.countPlace = countPlace;
 	}
-	public Long getId() {
-		return id;
-	}
-	public void setId(Long id) {
-		this.id = id;
-	}
-	public String getDescription() {
-		return description;
-	}
 	public void setDescription(String description) {
 		this.description = description;
-	}
-	public Date getDate() {
-		return date;
 	}
 	public void setDate(Date date) {
 		this.date = date;
 	}
-	public String getPlace() {
-		return place;
-	}
 	public void setPlace(String place) {
 		this.place = place;
+	}
+	public String getDescription() {
+		return description;
+	}
+	public Date getDate() {
+		return date;
+	}
+	public String getPlace() {
+		return place;
 	}
 	public List<User> getListOfUsers() {
 		return listOfUsers;
 	}
 	public void setListOfUsers(List<User> listOfUsers) {
-		this.listOfUsers = listOfUsers;
+		if (this.countPlace >= this.listOfUsers.size()) {
+			this.listOfUsers = listOfUsers;
+		}
 	}
 	public List<Performer> getListOfPerformers() {
 		return listOfPerformers;
@@ -77,13 +71,12 @@ public class Festival extends Event {
 	public void setPrice(double price) {
 		this.price = price;
 	}
-	public Set<TypeFestival> getType() {
+
+	public Set<TypeEvent> getType() {
 		return type;
 	}
-	public void setType(Set<TypeFestival> type) {
+
+	public void setType(Set<TypeEvent> type) {
 		this.type = type;
 	}
 }
-
-   
-    

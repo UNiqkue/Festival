@@ -1,12 +1,9 @@
 package by.nik.traning.dao.entity;
 
-import by.nik.traning.dao.entity.abstracts.User;
-
 import java.sql.Date;
 
 public class Performer extends User {
 
-    private Long id;
     private String firstName;
     private String lastName;
     private String username;
@@ -14,19 +11,11 @@ public class Performer extends User {
     private String email;
     private String activationCode;
     private String phoneNumber;
-    private Date dateOfBirth;
+    private int age;
     private String duration;
     private String genre;
 
     public Performer(){}
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
 
     public String getFirstName() {
         return firstName;
@@ -84,12 +73,12 @@ public class Performer extends User {
         this.phoneNumber = phoneNumber;
     }
 
-    public Date getDateOfBirth() {
-        return dateOfBirth;
+    public int getAge() {
+        return age;
     }
 
-    public void setDateOfBirth(Date dateOfBirth) {
-        this.dateOfBirth = dateOfBirth;
+    public void setAge(int age) {
+        this.age = age;
     }
 
     public String getDuration() {
